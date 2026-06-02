@@ -3,6 +3,55 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    macros {
+        dot_uni_lin: dot_uni_lin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT>
+                , <&kp U>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                , <&kp N2>
+                , <&kp E>
+                , <&kp RET>
+                ;
+        };
+
+        comma_uni_lin: comma_uni_lin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT>
+                , <&kp U>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                , <&kp N2>
+                , <&kp C>
+                , <&kp RET>
+                ;
+        };
+
+        question_uni_lin: question_uni_lin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&macro_press &kp LCTRL &kp LSHFT>
+                , <&kp U>
+                , <&macro_release &kp LCTRL &kp LSHFT>
+                , <&kp N3>
+                , <&kp F>
+                , <&kp RET>
+                ;
+        };
+    };
+
+
+
     combos {
         compatible = "zmk,combos";
 
